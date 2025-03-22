@@ -2,7 +2,7 @@
 
 Welcome to the repository for **Kavan Gajjar's Portfolio**, a showcase of 3D modeling, animation, and motion design expertise. This project is built using **Flask** and features a responsive design with **Bootstrap**.
 
-![Portfolio Screenshot](generated-icon.png)
+<!-- ![Portfolio Screenshot](generated-icon.png) -->
 
 ## Table of Contents
 
