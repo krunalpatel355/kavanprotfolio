@@ -168,17 +168,56 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <div class="video-container">
-                    <!-- Using placeholder SVG for video -->
-                    <svg class="img-fluid" viewBox="0 0 16 9" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="16" height="9" fill="#212529" />
-                        <text x="8" y="4.5" text-anchor="middle" fill="#ffffff" font-size="1">Animation Demo Reel</text>
-                        <circle cx="8" cy="4.5" r="1" fill="#ffffff" />
-                        <polygon points="7.6,3.5 8.6,4.5 7.6,5.5" fill="#ffffff" />
-                    </svg>
-                    <p class="text-center mt-3">A compilation of my recent animation and 3D modeling work, showcasing various styles and techniques.</p>
+                    <video id="main-video" class="img-fluid" controls>
+                        <source src="{{ url_for('static', filename='video/video1.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="text-center mt-3">Select a video to play:</p>
+                </div>
+                <div class="video-thumbnails d-flex justify-content-center mt-3">
+                    <img src="{{ url_for('static', filename='thumbnails/thumb1.jpg') }}" alt="Video 1" class="thumbnail img-fluid mx-2" onclick="changeVideo('static/video/video1.mp4')">
+                    <img src="{{ url_for('static', filename='thumbnails/thumb2.jpg') }}" alt="Video 2" class="thumbnail img-fluid mx-2" onclick="changeVideo('static/video/video2.mp4')">
+                    <img src="{{ url_for('static', filename='thumbnails/thumb3.jpg') }}" alt="Video 3" class="thumbnail img-fluid mx-2" onclick="changeVideo('static/video/video3.mp4')">
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    function changeVideo(videoSrc) {
+        const mainVideo = document.getElementById('main-video');
+        mainVideo.src = videoSrc;
+        mainVideo.play();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.project-filters .nav-link');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                // Add active class to the clicked button
+                this.classList.add('active');
+
+                // Get the filter category
+                const filterCategory = this.textContent.trim();
+
+                // Show/hide project cards based on the filter
+                projectCards.forEach(card => {
+                    if (filterCategory === 'All' || card.textContent.includes(filterCategory)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
 {% endblock %}

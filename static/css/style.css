@@ -341,6 +341,40 @@ header {
     background-color: var(--primary-color);
 }
 
+/* Video Showcase Enhancements */
+.video-showcase {
+    padding: 5rem 0;
+    background-color: var(--light-color);
+    text-align: center;
+}
+.video-container {
+    margin: 0 auto;
+    max-width: 800px;
+    border: 2px solid var(--light-gray-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.video-thumbnails {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.video-thumbnails img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+}
+.video-thumbnails img:hover {
+    transform: scale(1.1);
+    border-color: var(--primary-color);
+}
+
 .video-showcase {
     padding: 5rem 0;
     background-color: var(--light-color);
