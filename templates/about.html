@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block title %}About - Kavan Gajjar{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>About Me</h1>
+        <p class="lead">Get to know more about my background and creative journey</p>
+    </div>
+</section>
+
+<section class="about-section">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-md-5">
+                <div class="about-image-container">
+                    <!-- Using an improved placeholder SVG for the about image -->
+                    <svg class="img-fluid rounded about-image" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="aboutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3d5afe;stop-opacity:0.7" />
+                                <stop offset="100%" style="stop-color:#00c853;stop-opacity:0.8" />
+                            </linearGradient>
+                            <clipPath id="roundedRect">
+                                <rect width="400" height="400" rx="20" />
+                            </clipPath>
+                        </defs>
+                        <g clip-path="url(#roundedRect)">
+                            <rect width="400" height="400" fill="#f5f5f5" />
+                            <circle cx="200" cy="150" r="100" fill="url(#aboutGrad)" />
+                            <rect x="100" y="230" width="200" height="170" rx="5" fill="url(#aboutGrad)" />
+                            <text x="200" y="330" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Kavan Gajjar</text>
+                            <text x="200" y="360" text-anchor="middle" fill="#ffffff" font-size="16">3D Artist & Animator</text>
+                        </g>
+                        <rect width="400" height="400" rx="20" fill="none" stroke="#3d5afe" stroke-width="3" />
+                    </svg>
+                    <div class="about-image-caption mt-3">
+                        <i class="fas fa-quote-left me-2 text-primary"></i>
+                        Creating visual stories that resonate and inspire
+                        <i class="fas fa-quote-right ms-2 text-primary"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="about-content">
+                    <span class="about-subtitle">Who Am I</span>
+                    <h2>Hi! I'm Kavan Gajjar</h2>
+                    <h3 class="profession-title mb-4">Video Editor / Motion Designer / 3D Artist</h3>
+                    <div class="about-text">
+                        <p>Hi! I'm Kavan Gajjar, a video editor, motion designer, and 3D artist with a passion for bringing ideas to life through visual storytelling. With expertise in Adobe Premiere, After Effects, Photoshop, Illustrator, and Maya, I specialize in crafting compelling visuals that leave a lasting impact.</p>
+                        <p>My creative journey started with Truyar Entertainers, a YouTube channel I co-founded, where I honed my skills in video production, editing, and audience engagement. Since then, I've collaborated with brands like Gokul Jewellers, SteelHacks Industries, and Rudraksh, helping them build strong visual identities through video content, motion graphics, and social media marketing.</p>
+                        <p>Beyond editing, I have a deep interest in 3D modeling and animation, constantly exploring new ways to blend creativity with technology. My goal is to push the boundaries of storytelling, whether through dynamic motion graphics, immersive 3D visuals, or high-quality cinematic edits.</p>
+                    </div>
+                    <div class="about-social mt-4">
+                        <a href="https://linkedin.com/in/kavangajjar" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://artstation.com/kavangajjar" class="social-icon" target="_blank"><i class="fab fa-artstation"></i></a>
+                        <a href="https://behance.net/kavangajjar" class="social-icon" target="_blank"><i class="fab fa-behance"></i></a>
+                        <a href="https://vimeo.com/kavangajjar" class="social-icon" target="_blank"><i class="fab fa-vimeo"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-12">
+                <h3 class="section-title">My Creative Journey</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Creative Beginnings</h4>
+                            <p class="timeline-date">2016 - 2018</p>
+                            <p>Co-founded Truyar Entertainers YouTube channel, producing and editing content for growing audience. Developed fundamental skills in video editing, visual effects, and audience engagement.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Expanding Creative Horizons</h4>
+                            <p class="timeline-date">2018 - 2020</p>
+                            <p>Began freelancing with local businesses, including Gokul Jewellers and Rudraksh. Expanded skillset to include motion graphics, 3D modeling, and commercial video production.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Professional Development</h4>
+                            <p class="timeline-date">2020 - 2022</p>
+                            <p>Collaborated with SteelHacks Industries on major marketing campaigns. Deepened expertise in 3D animation and character modeling. Established reputation as versatile visual artist and animator.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Current Focus</h4>
+                            <p class="timeline-date">2022 - Present</p>
+                            <p>Specializing in high-end 3D character modeling and animation for diverse clients. Exploring innovative storytelling techniques through immersive 3D environments and character-driven narratives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md-6">
+                <h3 class="section-title">My Approach</h3>
+                <p>My creative process begins with a deep understanding of the story that needs to be told. Whether it's a product showcase, character animation, or visual effect, I focus on how the visuals can enhance the narrative and connect with the audience.</p>
+                <p>I believe in combining technical excellence with creative vision. My work is characterized by attention to detail, clean execution, and an emphasis on visual storytelling. I strive to create work that not only looks impressive but also conveys meaning and emotion.</p>
+                <p>I'm always exploring new techniques and technologies to expand my creative toolkit. This continuous learning approach allows me to offer innovative solutions and stay at the cutting edge of 3D art and animation.</p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="section-title">Beyond Work</h3>
+                <p>When I'm not creating 3D models or animations, I enjoy exploring other creative outlets such as photography and traditional art. These pursuits help me develop a well-rounded artistic vision that informs my digital work.</p>
+                <p>I'm an avid fan of animated films and games, constantly analyzing and appreciating the craft behind them. This passion fuels my own creative endeavors and keeps me inspired to push the boundaries of what's possible.</p>
+                <p>I believe in giving back to the creative community through tutorials, workshops, and open-source projects. Sharing knowledge and collaborating with other artists is an important part of my creative journey.</p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-12 text-center">
+                <h3 class="section-title mb-4">Let's Create Something Amazing</h3>
+                <p class="lead mb-4">I'm always excited to work on creative projects that challenge and inspire—let's create something amazing together!</p>
+                <a href="mailto:kavan.gajjar@example.com" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

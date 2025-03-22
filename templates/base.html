@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Kavan Gajjar - 3D Modelling Artist / Animator{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{{ url_for('home') }}">
+                        <span class="brand-name">Kavan Gajjar</span>
+                        <span class="brand-title">3D Artist & Animator</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == url_for('home') %}active{% endif %}" href="{{ url_for('home') }}">
+                                    <i class="fas fa-home nav-icon"></i> Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == url_for('projects') %}active{% endif %}" href="{{ url_for('projects') }}">
+                                    <i class="fas fa-project-diagram nav-icon"></i> Projects
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == url_for('skills') %}active{% endif %}" href="{{ url_for('skills') }}">
+                                    <i class="fas fa-tools nav-icon"></i> Skills
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">
+                                    <i class="fas fa-user nav-icon"></i> About
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == url_for('resume') %}active{% endif %}" href="{{ url_for('resume') }}">
+                                    <i class="fas fa-file-alt nav-icon"></i> Resume
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer mt-auto py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Kavan Gajjar</h5>
+                    <p>3D Modelling Artist / Animator</p>
+                    <p class="footer-tagline">Creating visual stories and immersive experiences</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Connect</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="mailto:kavan.gajjar@example.com"><i class="fas fa-envelope me-2"></i>kavan.gajjar@example.com</a></li>
+                        <li><a href="https://linkedin.com/in/kavangajjar" target="_blank"><i class="fab fa-linkedin me-2"></i>LinkedIn</a></li>
+                        <li><a href="https://github.com/kavangajjar" target="_blank"><i class="fab fa-github me-2"></i>GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Portfolio</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="https://vimeo.com/kavangajjar" target="_blank"><i class="fab fa-vimeo me-2"></i>Vimeo</a></li>
+                        <li><a href="https://artstation.com/kavangajjar" target="_blank"><i class="fab fa-artstation me-2"></i>ArtStation</a></li>
+                        <li><a href="https://behance.net/kavangajjar" target="_blank"><i class="fab fa-behance me-2"></i>Behance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <div class="footer-divider"></div>
+                    <p class="mb-0 copyright">&copy; 2025 Kavan Gajjar. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
