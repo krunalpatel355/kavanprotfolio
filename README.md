@@ -12,6 +12,7 @@ Welcome to the repository for **Kavan Gajjar's Portfolio**, a showcase of 3D mod
 - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
+- [Deployment to AWS EC2](#deployment-to-aws-ec2)
 - [License](#license)
 
 ## About
@@ -72,6 +73,25 @@ KavanPortfolio/
 ├── templates/           # HTML templates
 ├── .github/workflows/   # CI/CD pipeline
 ```
+
+## Deployment to AWS EC2
+
+This project includes a GitHub Actions workflow for automated deployment to an AWS EC2 instance. The deployment process involves the following steps:
+
+1. **Pre-requisites**:
+   - Ensure the `kavan.pem` file (your EC2 key pair) is present in the project root.
+   - Update the EC2 instance's public IP address in the `.github/workflows/ci-cd.yml` file.
+
+2. **Workflow Steps**:
+   - On every push to the `master` branch, the workflow will:
+     - SSH into the EC2 instance using the `kavan.pem` key.
+     - Pull the latest code from the repository.
+     - Build and run the Docker container.
+
+3. **Access the Application**:
+   - After deployment, the application will be accessible at `http://<EC2-Public-IP>`.
+
+**Note**: For security reasons, avoid committing sensitive files like `.pem` keys to public repositories.
 
 ## License
 
