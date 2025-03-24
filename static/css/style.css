@@ -560,7 +560,9 @@ header {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
-
+.hidden {
+    display: none;
+}
 /* ===== Resume Page ===== */
 .resume-section {
     padding: 5rem 0;
