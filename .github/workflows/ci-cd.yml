@@ -43,5 +43,5 @@ jobs:
           docker stop kavanportfolio-container || true
           docker rm kavanportfolio-container || true
           docker build -t kavanportfolio .
-          docker run -d -p 80:5000 --name kavanportfolio-container1 kavanportfolio
+          docker run -d -p 80:5000 --name kavanportfolio-container kavanportfolio
         EOF
