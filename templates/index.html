@@ -39,6 +39,12 @@
         box-shadow: 0 5px 10px rgba(102, 252, 241, 0.25);
         transform: translateY(-2px);
     }
+
+    .hero-section {
+        position: relative;
+        background-image: url('{{ url_for('static', filename='bg-pp.jpg') }}');
+        background-repeat: no-repeat;
+    }
 </style>
 <section class="hero-section">
     <div class="container">
@@ -48,7 +54,7 @@
                     <img src="{{ url_for('static', filename='pp.jpg') }}" alt="Profile Image" class="profile-image img-fluid">
                 </div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <div class="hero-content">
                     <div class="hero-badge">3D Artist & Animator</div>
                     <h1>Kavan Gajjar</h1>
@@ -72,12 +78,12 @@
                 <div class="project-card">
                     <div class="project-thumbnail">
                         <video class="img-fluid" autoplay loop muted>
-                            <source src="{{ url_for('static', filename='video/video1.mp4') }}" type="video/mp4">
+                            <source src="{{ url_for('static', filename='video/3D_Modelling_Demo.mp4') }}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="project-info">
-                        <h4>3D Character Design</h4>
+                        <h4>3D Model Design</h4>
                         <p>A detailed character model created for an animated short film, featuring advanced rigging and texturing.</p>
                         <a href="{{ url_for('projects') }}" class="btn btn-outline-secondary">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -87,13 +93,13 @@
                 <div class="project-card">
                     <div class="project-thumbnail">
                         <video class="img-fluid" autoplay loop muted>
-                            <source src="{{ url_for('static', filename='video/video1.mp4') }}" type="video/mp4">
+                            <source src="{{ url_for('static', filename='video/3D_Animation_Demo.mp4') }}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="project-info">
-                        <h4>Motion Graphics Showcase</h4>
-                        <p>A collection of motion graphics work created for commercial clients, showcasing dynamic animations and visual effects.</p>
+                        <h4>Animation Showcase</h4>
+                        <p>Bringing stories to life through dynamic and expressive animation, focusing on smooth motion, character performance, and visual appeal.</p>
                         <a href="{{ url_for('projects') }}" class="btn btn-outline-secondary">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -132,8 +138,8 @@
                     <div class="skill-icon">
                         <i class="fas fa-palette fa-3x"></i>
                     </div>
-                    <h4>Texturing & Rendering</h4>
-                    <p>Creating realistic materials and textures, and rendering high-quality images and animations.</p>
+                    <h4>Motion Graphics</h4>
+                    <p>Creating visually compelling designs with a focus on branding, typography, and layout to communicate ideas effectively and engage audiences.</p>
                 </div>
             </div>
         </div>
