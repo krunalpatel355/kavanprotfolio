@@ -25,28 +25,28 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link {% if request.path == url_for('home') %}active{% endif %}" href="{{ url_for('home') }}">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-active-link {% if request.path == url_for('home') %}active{% endif %}" href="{{ url_for('home') }}">
                                     <i class="fas fa-home nav-icon"></i> Home
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == url_for('projects') %}active{% endif %}" href="{{ url_for('projects') }}">
+                                <a class="nav-link nav-active-link {% if request.path == url_for('projects') %}active{% endif %}" href="{{ url_for('projects') }}">
                                     <i class="fas fa-project-diagram nav-icon"></i> Projects
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == url_for('skills') %}active{% endif %}" href="{{ url_for('skills') }}">
+                                <a class="nav-link nav-active-link {% if request.path == url_for('skills') %}active{% endif %}" href="{{ url_for('skills') }}">
                                     <i class="fas fa-tools nav-icon"></i> Skills
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">
+                                <a class="nav-link nav-active-link {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">
                                     <i class="fas fa-user nav-icon"></i> About
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == url_for('resume') %}active{% endif %}" href="{{ url_for('resume') }}">
+                                <a class="nav-link nav-active-link {% if request.path == url_for('resume') %}active{% endif %}" href="{{ url_for('resume') }}">
                                     <i class="fas fa-file-alt nav-icon"></i> Resume
                                 </a>
                             </li>

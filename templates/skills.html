@@ -183,9 +183,9 @@
     </div>
 </section>
 
-<section class="tools-section bg-light py-5">
+<section class="tools-section">
     <div class="container">
-        <h2 class="section-title mb-4">Tools & Software</h2>
+        <h2 class="section-title mb-4 text-center">Tools & Software</h2>
         <div class="row tools-grid">
             <div class="col-6 col-md-3 col-lg-2 mb-4">
                 <div class="tool-item">
@@ -286,4 +286,95 @@
         </div>
     </div>
 </section>
+
+<style>
+    /* Enhancements for Skills Page */
+    .skill-progress .progress-bar {
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        box-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
+    }
+    
+    .skill-card {
+        border: 1px solid rgba(102, 252, 241, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .skill-card:hover {
+        border-color: rgba(102, 252, 241, 0.3);
+    }
+    
+    .skill-icon {
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+    }
+    
+    .skill-card:hover .skill-icon {
+        transform: translateY(-5px);
+    }
+    
+    .skill-list li {
+        position: relative;
+        padding-left: 1rem;
+    }
+    
+
+    /* Tools Section Styles */
+    .tools-section {
+        background-color: #1a232e;
+        padding: 5rem 0;
+    }
+    
+    .tools-section .section-title {
+        color: var(--primary-color);
+        position: relative;
+        display: inline-block;
+        margin: 0 auto 3rem;
+    }
+    
+    .tools-section .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+    
+    .tools-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .tool-item {
+        background-color: #0f1923;
+        border-radius: 8px;
+        padding: 1.5rem 1rem;
+        text-align: center;
+        height: 100%;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(102, 252, 241, 0.05);
+    }
+    
+    .tool-item:hover {
+        transform: translateY(-5px);
+        background-color: #141e28;
+        border-color: rgba(102, 252, 241, 0.2);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tool-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+    
+    .tool-item p {
+        margin: 0;
+        color: var(--light-color);
+        font-weight: 500;
+    }
+</style>
 {% endblock %}

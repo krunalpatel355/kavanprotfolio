@@ -9,6 +9,36 @@
         height: 18rem;
         object-fit: cover;
     }
+    
+    .project-card .btn {
+        padding: 0.5rem 1.25rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .project-card .btn i {
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+    }
+    
+    .project-card .btn:hover i {
+        transform: translateX(3px);
+    }
+    
+    .project-card .btn-outline-secondary {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+    }
+    
+    .project-card .btn-outline-secondary:hover {
+        background-color: var(--primary-color);
+        color: var(--dark-color);
+        box-shadow: 0 5px 10px rgba(102, 252, 241, 0.25);
+        transform: translateY(-2px);
+    }
 </style>
 <section class="hero-section">
     <div class="container">
@@ -46,11 +76,14 @@
                             <rect width="400" height="225" fill="#6c757d" />
                             <text x="200" y="112.5" text-anchor="middle" fill="#ffffff" font-size="24">3D Model</text>
                         </svg>
+                        <!-- <div class="project-overlay">
+                            <div class="project-category">Character</div>
+                        </div> -->
                     </div>
                     <div class="project-info">
-                        <h4>3D Design</h4>
+                        <h4>3D Character Design</h4>
                         <p>A detailed character model created for an animated short film, featuring advanced rigging and texturing.</p>
-                        <a href="{{ url_for('projects') }}" class="btn btn-sm btn-outline-secondary">View Details</a>
+                        <a href="{{ url_for('projects') }}" class="btn btn-outline-secondary">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -62,17 +95,20 @@
                             <rect width="400" height="225" fill="#6c757d" />
                             <text x="200" y="112.5" text-anchor="middle" fill="#ffffff" font-size="24">Animation Demo</text>
                         </svg>
+                        <!-- <div class="project-overlay">
+                            <div class="project-category">Motion</div>
+                        </div> -->
                     </div>
                     <div class="project-info">
                         <h4>Motion Graphics Showcase</h4>
                         <p>A collection of motion graphics work created for commercial clients, showcasing dynamic animations and visual effects.</p>
-                        <a href="{{ url_for('projects') }}" class="btn btn-sm btn-outline-secondary">View Details</a>
+                        <a href="{{ url_for('projects') }}" class="btn btn-outline-secondary">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-center mt-3">
-            <a href="{{ url_for('projects') }}" class="btn btn-outline-primary">See All Projects</a>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('projects') }}" class="btn btn-outline-primary">See All Projects <i class="fas fa-th ms-1"></i></a>
         </div>
     </div>
 </section>
@@ -109,8 +145,8 @@
                 </div>
             </div>
         </div>
-        <div class="text-center mt-3">
-            <a href="{{ url_for('skills') }}" class="btn btn-outline-primary">See All Skills</a>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('skills') }}" class="btn btn-outline-primary">See All Skills <i class="fas fa-chevron-right ms-1"></i></a>
         </div>
     </div>
 </section>
