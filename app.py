@@ -18,6 +18,12 @@ def home():
 def projects():
     return render_template('projects.html')
 
+@app.route('/projects/<int:project_id>')
+def project_details(project_id):
+    # This could be expanded to fetch project details from a database
+    # For now, we're using a static template with project_id parameter
+    return render_template('project_details.html', project_id=project_id)
+
 @app.route('/skills')
 def skills():
     return render_template('skills.html')
